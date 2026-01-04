@@ -1,0 +1,26 @@
+# .github/workflows/python-test.yml
+name: Python Test CI
+
+on: [push] # 코드를 push(올리기) 할 때마다 실행해!
+
+jobs:
+  test:
+    runs-on: ubuntu-latest # 최신 리눅스 컴퓨터를 한 대 빌려줘!
+
+    steps:
+    - name: 코드를 가져옵니다
+      uses: actions/checkout@v4
+
+    - name: 파이썬을 설치합니다 (버전 3.10)
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: 필요한 도구들을 설치합니다 (pytest 등)
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: 테스트를 실행합니다
+      run: |
+        pytest -v
