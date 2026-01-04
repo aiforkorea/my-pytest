@@ -1,7 +1,7 @@
 # main.py
 def sumx(num):   # 함수 생성
     if num == 1:
-        return 1
+        return 0
     else:
         return sumx(num-1) + num  # 재귀함수 활용
 # 복수 입력/출력 함수 추가
