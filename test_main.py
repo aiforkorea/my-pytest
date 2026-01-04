@@ -18,3 +18,8 @@ def test_addx_independent(case):
     #assert sumx(num) == expected
     print(f"\n지금 테스트 중인 숫자: {quest}")
     print(f"테스트 {quest}의 코드실행 결과는 {result}이고, ground-truth는 {answ}임")
+# 추가 테스트
+# 테스트 2
+def test_sumx_10():
+    # sumx(10)가 5와 같은 지 확인
+    assert  sumx(1) == 1
